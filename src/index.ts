@@ -10,9 +10,6 @@ const git = (args: string[]): cp.SpawnSyncReturns<Buffer> =>
   cp.spawnSync("git", args, {stdio: "inherit"});
 
 function getGitDir(path = "./"): string {
-  if(path === '../../../.././') {
-    throw new Error(`.git can't be found`)
-  }
   const pre = "../";
   if (!fs.existsSync(path + ".git")) {
     return getGitDir(pre + path);
@@ -22,15 +19,16 @@ function getGitDir(path = "./"): string {
 }
 
 export function install(dir = ".husky"): void {
-  // Find the .git folder
-  const gitTop = getGitDir();
-
   // Ensure that we're inside a git repository
   // If git command is not found, status is null and we should return.
   // That's why status value needs to be checked explicitly.
   if (git(["rev-parse"]).status !== 0) {
     return;
   }
+
+  // Find the .git folder
+  // Last step already make sure we're inside a git repository
+  const gitTop = getGitDir();
 
   // Custom dir help
   const url = "https://git.io/Jc3F9";

@@ -1,6 +1,6 @@
 {
-  "name": "cw-devops-husky",
-  "version": "1.0-beta",
+  "name": "cw-husky",
+  "version": "1.0.0",
   "description": "husky for CanWay Devops TD",
   "keywords": [
     "git",
