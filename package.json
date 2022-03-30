@@ -1,17 +1,16 @@
 {
-  "name": "husky",
-  "version": "7.0.4",
-  "description": "Modern native Git hooks made easy",
+  "name": "cw-devops-husky",
+  "version": "1.0-beta",
+  "description": "husky for CanWay Devops TD",
   "keywords": [
     "git",
     "hooks",
     "pre-commit"
   ],
-  "homepage": "https://typicode.github.io/husky",
-  "repository": "typicode/husky",
-  "funding": "https://github.com/sponsors/typicode",
+  "homepage": "https://github.com/Morris-G/husky",
+  "repository": "https://github.com/Morris-G/husky",
   "license": "MIT",
-  "author": "Typicode <typicode@gmail.com>",
+  "author": "morris@canway.net",
   "bin": "lib/bin.js",
   "main": "lib/index.js",
   "files": [

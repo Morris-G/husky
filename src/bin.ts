@@ -36,7 +36,7 @@ const cmds: { [key: string]: () => void } = {
 try {
   // Run command or show usage for unknown command
   cmds[cmd] ? cmds[cmd]() : help(0)
-} catch (e) {
+} catch (e: any) {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   console.error(e.message)
   process.exit(1)
