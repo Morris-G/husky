@@ -1,6 +1,6 @@
 {
   "name": "cw-husky",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "husky for CanWay Devops TD",
   "keywords": [
     "git",
@@ -15,7 +15,8 @@
   "main": "lib/index.js",
   "files": [
     "lib",
-    "husky.sh"
+    "husky.sh",
+    "commit-msg"
   ],
   "scripts": {
     "build": "tsc",
