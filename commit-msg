@@ -13,6 +13,24 @@ NUM=`echo $MSG | awk '{print $2}'`
 if [[ $TYPE =~ (docs|feat|fix|perf|refactor|style|test) ]] && [[ $NUM =~ ^p[0-9]_[0-9]+$ ]] ; then
     green_echo "commit check success"
     exit 0
+elif [[ $TYPE =~ (docs|feat|fix|perf|refactor|style|test) ]] && [[ $NUM =~ ^p[0-9]+_[0-9]+[H][0-9]+[\.]{1}[0-9]{1,2}$ ]] ; then
+    green_echo "commit check success"
+    exit 0
+elif [[ $TYPE =~ (docs|feat|fix|perf|refactor|style|test) ]] && [[ $NUM =~ ^p[0-9]+_[0-9]+[H][0-9]+$ ]] ; then
+    green_echo "commit check success"
+    exit 0
+elif [[ $TYPE =~ (docs|feat|fix|perf|refactor|style|test) ]] && [[ $NUM =~ ^p[0-9]+_[0-9]+[\#]{1}[0-9]+[\.]{1}[0-9]{1,2}$ ]] ; then
+    green_echo "commit check success"
+    exit 0
+elif [[ $TYPE =~ (docs|feat|fix|perf|refactor|style|test) ]] && [[ $NUM =~ ^p[0-9]+_[0-9]+[\#]{1}[0-9]+$ ]] ; then
+    green_echo "commit check success"
+    exit 0
+elif [[ $TYPE =~ (docs|feat|fix|perf|refactor|style|test) ]] && [[ $NUM =~ ^p[0-9]+_[0-9]+[\#]{1}$ ]] ; then
+    green_echo "commit check success"
+    exit 0
+elif [[ $MSG =~ Merge{1}.*branch{1}.*into{1}.* ]] ; then
+    green_echo "commit check success"
+    exit 0
 else
     red_echo "[error] irregular commit message"
     red_echo "[e.g.] fix: p1_12345 流水线功能修复"
