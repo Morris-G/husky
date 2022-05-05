@@ -27,11 +27,20 @@ yarn add cw-husky -D
 ## 添加脚本
 
 在根目录`package.json`文件的`scripts`中加入`prepare`脚本，内容为`cw-husky install`
+
+```json
+...
+"prepare": "cw-husky install",
+...
+```
+
 设置后要执行一次此脚本
 
 ```sh
 yarn prepare
 ```
+
+---
 
 ## 新增Hook示例
 
