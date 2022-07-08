@@ -1,4 +1,4 @@
-# cw-husky
+# devops-husky
 
 > 基于[husky@7.0.4](https://github.com/typicode/husky)开发
 
@@ -19,18 +19,18 @@
 # 安装
 
 ```
-yarn add cw-husky -D
+yarn add @devops/devops-husky -D
 ```
 
 # 使用
 
 ## 添加脚本
 
-在根目录`package.json`文件的`scripts`中加入`prepare`脚本，内容为`cw-husky install`
+在根目录`package.json`文件的`scripts`中加入`prepare`脚本，内容为`devops-husky install`
 
 ```json
 ...
-"prepare": "cw-husky install",
+"prepare": "devops-husky install",
 ...
 ```
 
@@ -41,11 +41,12 @@ yarn prepare
 ```
 
 ---
+以下使用同[Husky](https://github.com/typicode/husky)，根据实际情况添加
 
 ## 新增Hook示例
 
 ```sh
-npx cw-husky add .husky/pre-commit "npm test"
+npx devops-husky add .husky/pre-commit "npm test"
 git add .husky/pre-commit
 ```
 
